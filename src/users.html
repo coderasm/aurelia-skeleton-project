@@ -1,21 +1,54 @@
 <template>
-  <require from="blur-image"></require>
-
   <section class="au-animate">
       <h2>${heading}</h2>
-      <div class="row au-stagger">
-        <div class="col-sm-6 col-md-3 card-container au-animate" repeat.for="user of users">
-            <div class="card">
-                <canvas class="header-bg" width="250" height="70" blur-image.bind="image"></canvas>
-                <div class="avatar">
-                    <img src.bind="user.avatar_url" crossorigin ref="image"/>
-                </div>
-                <div class="content">
-                    <p class="name">${user.login}</p>
-                    <p><a target="_blank" class="btn btn-default" href.bind="user.html_url">Contact</a></p>
+	  <div class="row au-stagger">
+        <div class="col-sm-12 col-md-12>
+            <div class="form-group">
+				<label for="count">Count(${state.count})</label>
+				<input value.bind="state.count" class="form-control" id="count" />
+			</div>
+       </div>
+	   <div class="col-sm-12 col-md-12>
+            <div class="checkbox-inline">
+				<label for="check">Check(${state.checked})</label>
+				<input id="check" type="checkbox" checked.bind="state.checked" />
+			</div>
+       </div>
+	   <div class="col-sm-12 col-md-12>
+            <div class="checkbox-inline">
+				<label for="checkonvm">Check On VM(${checked})</label>
+				<input id="checkonvm" type="checkbox" checked.bind="checked" />
+			</div>
+       </div>
+	   <div class="row au-stagger row-5-padding">
+            <div class="col-sm-12 col-md-12" show.bind="showChecked">
+                <div class="panel panel-default">
+                    <div class="panel-body bg-info">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <div class="form-group">
+									Shown from check on state
+								</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-      </div>
+		<div class="row au-stagger row-5-padding">
+            <div class="col-sm-12 col-md-12" show.bind="showCheckedOnVM">
+                <div class="panel panel-default">
+                    <div class="panel-body bg-info">
+                        <div class="row text-center">
+                            <div class="col-md-12">
+                                <div class="form-group">
+									Shown from check on VM
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
   </section>
 </template>
