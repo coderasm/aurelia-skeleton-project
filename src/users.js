@@ -34,7 +34,6 @@ export class Users {
 		console.log("newValuePredicate: " + newValuePredicate + " oldValuePredicate: " + oldValuePredicate);
     }
 	
-	@computedFrom("state.checked")
     get showChecked()
     {
         return this.state.checked;

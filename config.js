@@ -18,6 +18,7 @@ System.config({
     "aurelia-animator-css": "github:aurelia/animator-css@0.17.0",
     "aurelia-binding": "github:aurelia/binding@0.10.1",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.18.0",
+    "aurelia-computed": "github:jdanyow/aurelia-computed@0.7.0",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.11.2",
     "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.9.0",
     "aurelia-fetch-client": "github:aurelia/fetch-client@0.3.0",
@@ -171,6 +172,11 @@ System.config({
       "aurelia-pal": "github:aurelia/pal@0.2.0",
       "aurelia-path": "github:aurelia/path@0.10.0",
       "aurelia-task-queue": "github:aurelia/task-queue@0.8.0",
+      "core-js": "npm:core-js@0.9.18"
+    },
+    "github:jdanyow/aurelia-computed@0.7.0": {
+      "aurelia-binding": "github:aurelia/binding@0.10.1",
+      "aurelia-logging": "github:aurelia/logging@0.8.0",
       "core-js": "npm:core-js@0.9.18"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
